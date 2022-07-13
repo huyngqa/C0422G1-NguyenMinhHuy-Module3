@@ -1,7 +1,6 @@
-drop database if exists furama;
-create database furama;
-
-use furama;
+DROP DATABASE IF EXISTS furama;
+CREATE DATABASE furama;
+USE furama;
 
 CREATE TABLE vi_tri (
     ma_vi_tri INT PRIMARY KEY,
@@ -123,10 +122,16 @@ INSERT INTO vi_tri
 VALUES (1,'Quản Lý'), (2,'NHân Viên');
 
 INSERT INTO trinh_do
-VALUES (1,'Trung Cấp'), (2,'Cao Đẳng'), (3,'ĐẠI Học'), (4,'Sau ĐạI Học');
+VALUES (1,'Trung Cấp'),
+ (2,'Cao Đẳng'),
+ (3,'ĐẠI Học'),
+ (4,'Sau ĐạI Học');
 
 INSERT INTO bo_phan
-VALUES (1,'Sale-Marketing'), (2,'Hành Chính'), (3,'Phục Vụ'), (4,'Phục Vụ');
+VALUES (1,'Sale-Marketing'),
+ (2,'Hành Chính'), 
+ (3,'Phục Vụ'),
+ (4,'Phục Vụ');
 
 INSERT INTO nhan_vien (ma_nhan_vien, ho_ten, ngay_sinh, so_cmnd, luong, so_dien_thoai, email, dia_chi, ma_vi_tri, ma_trinh_do, ma_bo_phan) 
 VALUES ('1', 'Nguyễn Văn An', '1970-11-07', '456231786', '10000000', '0901234121', 'annguyen@gmail.com', '295 Nguyễn Tất Thành, Đà Nẵng', '1', '3', '1'),
