@@ -1,18 +1,22 @@
-create database student_management;
-use student_management;
-create table student (
-  id_student int not null primary key,
-  name_student varchar(4) null,
-  age int null,
-  country varchar(45)
+DROP DATABASE student_management;
+CREATE DATABASE student_management;
+USE student_management;
+
+CREATE TABLE student (
+    id_student INT NOT NULL PRIMARY KEY,
+    name_student VARCHAR(4) NULL,
+    age INT NULL,
+    country VARCHAR(45)
 );
-create table teacher (
-  id_teacher int not null primary key,
-  name_teacher varchar(4) null,
-  age int null,
-  country varchar(45)
+
+CREATE TABLE teacher (
+    id_teacher INT NOT NULL PRIMARY KEY,
+    name_teacher VARCHAR(4) NULL,
+    age INT NULL,
+    country VARCHAR(45)
 );
-create table class (
-  id_class int not null primary key,
-  name_class varchar(45) null
+
+CREATE TABLE class (
+    id_class INT NOT NULL PRIMARY KEY,
+    name_class VARCHAR(45) NULL
 );
