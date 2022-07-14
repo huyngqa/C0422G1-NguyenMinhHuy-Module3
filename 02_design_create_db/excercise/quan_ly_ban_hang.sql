@@ -2,24 +2,25 @@ DROP DATABASE IF EXISTS quan_ly_ban_hang;
 CREATE DATABASE quan_ly_ban_hang;
 USE quan_ly_ban_hang;
 
-create table khach_hang (
-	ma_khach_hang int primary key,
-    ten_khach_hang varchar (55) not null,
-    ngay_sinh date
+CREATE TABLE khach_hang (
+    ma_khach_hang INT PRIMARY KEY,
+    ten_khach_hang VARCHAR(55) NOT NULL,
+    ngay_sinh DATE
 );
 
-create table don_dat_hang (
-	ma_dat_hang int primary key,
-    ma_khach_hang int not null,
-    ngay_dat_hang date not null,
-    tong_tien int not null,
-    foreign key (ma_khach_hang) references khach_hang(ma_khach_hang)
+CREATE TABLE don_dat_hang (
+    ma_dat_hang INT PRIMARY KEY,
+    ma_khach_hang INT NOT NULL,
+    ngay_dat_hang DATE NOT NULL,
+    tong_tien INT NOT NULL,
+    FOREIGN KEY (ma_khach_hang)
+        REFERENCES khach_hang (ma_khach_hang)
 );
 
-create table san_pham (
-	ma_san_pham int primary key,
-    ten_san_pham varchar(30) not null,
-    gia_san_pham int not null
+CREATE TABLE san_pham (
+    ma_san_pham INT PRIMARY KEY,
+    ten_san_pham VARCHAR(30) NOT NULL,
+    gia_san_pham INT NOT NULL
 );
 
 CREATE TABLE chi_tiet_hoa_don (
