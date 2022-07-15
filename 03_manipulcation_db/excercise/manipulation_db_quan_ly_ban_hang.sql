@@ -62,7 +62,7 @@ WHERE
 SELECT 
     d.ma_dat_hang,
     d.ngay_dat_hang,
-    SUM((s.gia_san_pham * c.so_luong)) AS tong_tien
+    SUM(s.gia_san_pham * c.so_luong) AS tong_tien
 FROM
     don_dat_hang d
         JOIN
