@@ -5,14 +5,14 @@ USE quan_ly_ban_hang;
 CREATE TABLE khach_hang (
     ma_khach_hang INT PRIMARY KEY,
     ten_khach_hang VARCHAR(55) NOT NULL,
-    ngay_sinh DATE
+    tuoi TINYINT
 );
 
 CREATE TABLE don_dat_hang (
     ma_dat_hang INT PRIMARY KEY,
     ma_khach_hang INT NOT NULL,
     ngay_dat_hang DATE NOT NULL,
-    tong_tien INT NOT NULL,
+    tong_tien INT,
     FOREIGN KEY (ma_khach_hang)
         REFERENCES khach_hang (ma_khach_hang)
 );
@@ -24,8 +24,8 @@ CREATE TABLE san_pham (
 );
 
 CREATE TABLE chi_tiet_hoa_don (
-    ma_dat_hang INT NOT NULL,
-    ma_san_pham INT NOT NULL,
+    ma_dat_hang INT,
+    ma_san_pham INT,
     so_luong INT NOT NULL,
     PRIMARY KEY (ma_dat_hang , ma_san_pham),
     FOREIGN KEY (ma_dat_hang)
