@@ -27,27 +27,46 @@ VALUES (1,1,3),
 (2,3,3);
 
 -- Hiển thị các thông tin  gồm oID, oDate, oPrice của tất cả các hóa đơn trong bảng Order
-SELECT ma_dat_hang, ngay_dat_hang, tong_tien
-FROM don_dat_hang;
+SELECT 
+    ma_dat_hang, ngay_dat_hang, tong_tien
+FROM
+    don_dat_hang;
 
--- Hiển thị danh sách các khách hàng đã mua hàng, và danh sách sản phẩm được mua bởi các khách
-SELECT k.ma_khach_hang, k.ten_khach_hang, d.ngay_dat_hang, s.ten_san_pham
-FROM khach_hang k
-JOIN don_dat_hang d ON k.ma_khach_hang = d.ma_khach_hang
-JOIN chi_tiet_hoa_don c ON d.ma_dat_hang = c.ma_dat_hang
-JOIN san_pham s ON c.ma_san_pham = s.ma_san_pham;
+SELECT 
+    k.ma_khach_hang,
+    k.ten_khach_hang,
+    d.ngay_dat_hang,
+    s.ten_san_pham
+FROM
+    khach_hang k
+        JOIN
+    don_dat_hang d ON k.ma_khach_hang = d.ma_khach_hang
+        JOIN
+    chi_tiet_hoa_don c ON d.ma_dat_hang = c.ma_dat_hang
+        JOIN
+    san_pham s ON c.ma_san_pham = s.ma_san_pham;
 
 -- Hiển thị tên những khách hàng không mua bất kỳ một sản phẩm nào
-SELECT k.ma_khach_hang, k.ten_khach_hang, d.ngay_dat_hang
-FROM khach_hang k
-LEFT JOIN don_dat_hang d ON k.ma_khach_hang = d.ma_khach_hang
-WHERE d.ngay_dat_hang IS NULL;
+SELECT 
+    k.ma_khach_hang, k.ten_khach_hang, d.ngay_dat_hang
+FROM
+    khach_hang k
+        LEFT JOIN
+    don_dat_hang d ON k.ma_khach_hang = d.ma_khach_hang
+WHERE
+    d.ngay_dat_hang IS NULL;
 
 -- Hiển thị mã hóa đơn, ngày bán và giá tiền của từng hóa đơn
 -- (giá một hóa đơn được tính bằng tổng giá bán của từng loại mặt hàng xuất hiện trong hóa đơn.
 -- Giá bán của từng loại được tính = odQTY*pPrice)
-SELECT d.ma_dat_hang, d.ngay_dat_hang, SUM((s.gia_san_pham * c.so_luong)) AS tong_tien
-FROM don_dat_hang d
-JOIN chi_tiet_hoa_don c ON d.ma_dat_hang = c.ma_dat_hang
-JOIN san_pham s ON c.ma_san_pham = s.ma_san_pham
+SELECT 
+    d.ma_dat_hang,
+    d.ngay_dat_hang,
+    SUM((s.gia_san_pham * c.so_luong)) AS tong_tien
+FROM
+    don_dat_hang d
+        JOIN
+    chi_tiet_hoa_don c ON d.ma_dat_hang = c.ma_dat_hang
+        JOIN
+    san_pham s ON c.ma_san_pham = s.ma_san_pham
 GROUP BY d.ma_dat_hang;
