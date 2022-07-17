@@ -274,10 +274,7 @@ SELECT
     dv.ten_dich_vu,
     hd.ngay_lam_hop_dong,
     hd.ngay_ket_thuc,
-    CASE
-        WHEN hdct.so_luong IS NULL THEN SUM(dv.chi_phi_thue)
-        ELSE SUM(dv.chi_phi_thue + hdct.so_luong * dvdk.gia)
-    END AS tong_tien
+    SUM(dv.chi_phi_thue + COALESCE(hdct.so_luong * dvdk.gia, 0)) AS a
 FROM
     loai_khach lk
         JOIN
@@ -290,10 +287,7 @@ FROM
     dich_vu_di_kem dvdk ON hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
         LEFT JOIN
     dich_vu dv ON hd.ma_dich_vu = dv.ma_dich_vu
-GROUP BY CASE
-    WHEN hd.ma_hop_dong IS NULL THEN kh.ho_ten
-    ELSE hd.ma_hop_dong
-END
+GROUP BY hd.ma_hop_dong
 ORDER BY kh.ma_khach_hang;
 
 -- 6. Hiển thị ma_dich_vu, ten_dich_vu, dien_tich, chi_phi_thue,
