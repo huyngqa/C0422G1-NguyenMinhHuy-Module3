@@ -487,8 +487,9 @@ FROM
     bo_phan bp ON bp.ma_bo_phan = nv.ma_bo_phan
         JOIN
     hop_dong hd ON nv.ma_nhan_vien = hd.ma_nhan_vien
+WHERE YEAR(ngay_lam_hop_dong) IN (2020, 2021)
 GROUP BY hd.ma_nhan_vien
-HAVING COUNT(hd.ma_nhan_vien) = 1;
+HAVING COUNT(hd.ma_nhan_vien) <= 3;
 
 -- 16. Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2019 đến năm 2021.
 
