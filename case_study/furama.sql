@@ -330,16 +330,18 @@ FROM
     loai_dich_vu ldv
         JOIN
     dich_vu dv ON ldv.ma_loai_dich_vu = dv.ma_loai_dich_vu
+		JOIN
+	hop_dong hd ON dv.ma_dich_vu = hd.ma_dich_vu
 WHERE
-    ten_dich_vu NOT IN (SELECT 
+   YEAR(ngay_lam_hop_dong) = 2020 AND ten_dich_vu NOT IN (SELECT 
             ten_dich_vu
         FROM
             dich_vu dv
                 JOIN
             hop_dong hd ON dv.ma_dich_vu = hd.ma_dich_vu
         WHERE
-            YEAR(hd.ngay_lam_hop_dong) <> 2020);
-
+            YEAR(hd.ngay_lam_hop_dong) = 2021)
+GROUP BY dv.ma_dich_vu;
 -- 8. Hiển thị thông tin ho_ten khách hàng có trong hệ thống, với yêu cầu ho_ten không trùng nhau.
 -- Học viên sử dụng theo 3 cách khác nhau để thực hiện yêu cầu trên.
 SELECT DISTINCT
@@ -492,9 +494,25 @@ GROUP BY hd.ma_nhan_vien
 HAVING COUNT(hd.ma_nhan_vien) <= 3;
 
 -- 16. Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2019 đến năm 2021.
+SET sql_safe_updates = 0;
+DELETE FROM nhan_vien 
+WHERE
+    ma_nhan_vien NOT IN (SELECT 
+        temp.ma_nhan_vien
+    FROM
+        (SELECT 
+            nv.ma_nhan_vien
+        FROM
+            nhan_vien nv
+        JOIN hop_dong hd ON nv.ma_nhan_vien = hd.ma_nhan_vien
+        
+        WHERE
+            YEAR(ngay_lam_hop_dong) IN (2019 , 2020, 2021)) AS temp);
+SET sql_safe_updates = 1;
 
-
-
+-- 17. Cập nhật thông tin những khách hàng có ten_loai_khach từ Platinum lên Diamond, chỉ cập nhật những khách hàng đã từng đặt phòng với
+-- Tổng Tiền thanh toán trong năm 2021 là lớn hơn 10.000.000 VNĐ.
+select 
 
 
 
