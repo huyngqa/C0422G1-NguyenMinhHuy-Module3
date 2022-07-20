@@ -274,7 +274,7 @@ SELECT
     dv.ten_dich_vu,
     hd.ngay_lam_hop_dong,
     hd.ngay_ket_thuc,
-    SUM(dv.chi_phi_thue + COALESCE(hdct.so_luong * dvdk.gia, 0)) AS tong_tien
+    dv.chi_phi_thue + SUM(COALESCE(hdct.so_luong * dvdk.gia, 0)) AS tong_tien
 FROM
     loai_khach lk
         JOIN
@@ -512,6 +512,7 @@ SET sql_safe_updates = 1;
 
 -- 17. Cập nhật thông tin những khách hàng có ten_loai_khach từ Platinium lên Diamond, chỉ cập nhật những khách hàng đã từng đặt phòng với
 -- Tổng Tiền thanh toán trong năm 2021 là lớn hơn 10.000.000 VNĐ.
+SET sql_safe_updates = 0;
 UPDATE khach_hang 
 SET 
     ma_loai_khach = (SELECT 
@@ -537,9 +538,10 @@ WHERE
                 (lk.ten_loai_khach = 'Platinium'
                     AND (dv.chi_phi_thue + COALESCE(hdct.so_luong * dvdk.gia, 0) > 1000000)
                     AND YEAR(ngay_lam_hop_dong) = 2021)) AS tmp);
+SET sql_safe_updates = 1;
 
 -- 18. Xóa những khách hàng có hợp đồng trước năm 2021 (chú ý ràng buộc giữa các bảng).
-SET SQL_SAFE_UPDATES = 0;
+SET FOREIGN_KEY_CHECKS=0;
 DELETE FROM khach_hang 
 WHERE
     ma_khach_hang IN (SELECT 
@@ -553,7 +555,7 @@ WHERE
         
         WHERE
             YEAR(ngay_lam_hop_dong) < 2021) AS tmp);
-SET SQL_SAFE_UPDATES = 1;
+SET FOREIGN_KEY_CHECKS=1;
 
 -- 18. Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
 SET SQL_SAFE_UPDATES = 0;
@@ -595,4 +597,10 @@ SELECT
     ngay_sinh,
     dia_chi
 FROM
-    khach_hang
+    khach_hang;
+    
+-- 21. Tạo khung nhìn có tên là v_nhan_vien để lấy được thông tin của tất cả các nhân viên có địa chỉ là “Yên Bái” 
+-- và đã từng lập hợp đồng cho một hoặc nhiều khách hàng bất kì với ngày lập hợp đồng là “12/12/2019”.
+-- CREATE VIEW v_nhan_vien AS SELECT * FROM nhan_vien where dia_chi LIKE '%Yên Bái%' AND 
+
+
