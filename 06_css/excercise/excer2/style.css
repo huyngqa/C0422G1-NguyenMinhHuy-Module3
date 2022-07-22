@@ -1,0 +1,16 @@
+body {
+    text-align: justify;
+    font-family: Arial SansSerif;
+}
+p {
+    font-size: 24px;
+}
+hr {
+    font-size: 50%;
+}
+.text {
+    text-indent: 50px;
+}
+.note {
+    color: blue;
+}
