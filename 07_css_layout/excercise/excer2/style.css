@@ -1,12 +1,60 @@
+body {
+    font-family: Segoe UI Historic, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
 .nav ul li {
     list-style: none;
     display: inline;
 }
 
-.fa-brands, .fa-search-location {
-    color: cornflowerblue;
-    font-size: 50px;
+#nav-left {
+    text-align: left;
 }
+
+#nav-center {
+    text-align: center;
+}
+
+#nav-center ul li a {
+    color: cornflowerblue;
+    display: inline-block;
+    font-size: 40px;
+    width: 100px;
+}
+
+#nav-right ul li a {
+    color: cornflowerblue;
+    display: inline-block;
+    font-size: 40px;
+    width: 50px;
+}
+.nav ul li i:hover {
+    background-color: black;
+    color: #CDCDCD;
+}
+#nav-right {
+    text-align: right;
+}
+
+i {
+    color: cornflowerblue;
+    font-size: 40px;
+}
+
+.img-ava {
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+#aside-left span{
+    text-align: center;
+}
+#aside-left p a {
+    text-decoration: none;
+    color: black;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
