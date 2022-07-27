@@ -2,27 +2,37 @@
     text-align: center;
     background-color: #0a53be;
 }
+
 .m-banner a {
     color: white;
     text-decoration: none;
 }
+
 .m-banner a:hover {
     text-decoration: underline;
 }
+
 #title1 {
     padding-left: 0;
     padding-top: 150px;
     font-size: 20px;
 }
+
 #title1 a {
     text-decoration: none;
     font-size: 16px;
 }
+
+#title1 a:hover {
+    text-decoration: underline;
+}
+
 #banner-bot {
     background: black;
     color: white;
     height: 50px;
 }
+
 #table-banner {
     margin-left: 30px;
 }
