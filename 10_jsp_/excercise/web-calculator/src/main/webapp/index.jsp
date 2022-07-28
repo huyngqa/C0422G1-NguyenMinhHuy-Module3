@@ -11,22 +11,36 @@
     <title>$Title$</title>
 </head>
 <body>
+    <h1>Simple Calculator</h1>
     <form method="post" action="/calculate">
-        <label>First operand: </label>
-        <input type="number" name="num1">
-        <br>
-        <label>Operator: </label>
-        <select name="operator">
-            <option value="+">Addition</option>
-            <option value="-">Subtraction</option>
-            <option value="*">Multiplication</option>
-            <option value="/">Division</option>
-        </select>
-        <br>
-        <label>Second operand: </label>
-        <input type="number" name="num2">
-        <br>
-        <button>Calculate</button>
+        <fieldset>
+            <legend>Calculator</legend>
+            <table>
+                <tr>
+                    <td>First operand: </td>
+                    <td><input name="num1" type="number"/></td>
+                </tr>
+                <tr>
+                    <td>Operator: </td>
+                    <td>
+                        <select name="operator">
+                            <option value="+">Addition</option>
+                            <option value="-">Subtraction</option>
+                            <option value="*">Multiplication</option>
+                            <option value="/">Division</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Second operand: </td>
+                    <td><input name="num2" type="number"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Calculate"/></td>
+                </tr>
+            </table>
+        </fieldset>
     </form>
 </body>
 </html>
