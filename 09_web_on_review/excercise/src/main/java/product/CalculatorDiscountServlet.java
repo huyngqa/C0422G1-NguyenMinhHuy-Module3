@@ -16,7 +16,7 @@ public class CalculatorDiscountServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html; charset=UTF-8");
         request.setCharacterEncoding("UTF-8");
-         
+
         String productDescription = request.getParameter("description");
         int price = Integer.parseInt(request.getParameter("price"));
         double discount = Double.parseDouble(request.getParameter("discount"));
