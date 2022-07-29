@@ -1,6 +1,6 @@
 package service;
 
-public class Calculator {
+public class CalculatorService {
     public static String calculate(double num1, double num2, String operator) {
         double total = 0;
         switch (operator) {

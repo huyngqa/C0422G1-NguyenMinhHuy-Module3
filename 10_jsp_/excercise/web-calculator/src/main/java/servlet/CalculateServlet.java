@@ -1,6 +1,6 @@
 package servlet;
 
-import service.Calculator;
+import service.CalculatorService;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -20,7 +20,7 @@ public class CalculateServlet extends HttpServlet {
         double num2 = Double.parseDouble(request.getParameter("num2"));
         String operator = request.getParameter("operator");
 
-        String result = Calculator.calculate(num1, num2, operator);
+        String result = CalculatorService.calculate(num1, num2, operator);
         RequestDispatcher dispatcher = request.getRequestDispatcher("display.jsp");
         request.setAttribute("num1", num1);
         request.setAttribute("num2", num2);
