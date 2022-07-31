@@ -30,7 +30,7 @@ public class ProductServlet extends HttpServlet {
                 showUpdateForm(request, response);
                 break;
             case "delete":
-                showDeleteForm(request, response);
+                deleteProduct(request, response);
                 break;
             case "details":
                 showDetailsProductById(request, response);
@@ -40,15 +40,11 @@ public class ProductServlet extends HttpServlet {
         }
     }
 
-    private void showDeleteForm(HttpServletRequest request, HttpServletResponse response) {
+    private void deleteProduct(HttpServletRequest request, HttpServletResponse response) {
         String productId = request.getParameter("id");
-        Product product = productService.findByProductById(productId);
-        request.setAttribute("product", product);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("view/product/delete.jsp");
+        productService.deleteProduct(productId);
         try {
-            dispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
+            response.sendRedirect("/products");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -121,21 +117,8 @@ public class ProductServlet extends HttpServlet {
             case "update":
                 updateProduct(request, response);
                 break;
-            case "delete":
-                deleteProduct(request, response);
-                break;
             default:
                 showListProductByName(request, response);
-        }
-    }
-
-    private void deleteProduct(HttpServletRequest request, HttpServletResponse response) {
-        String productId = request.getParameter("id");
-        productService.deleteProduct(productId);
-        try {
-            response.sendRedirect("/products");
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
