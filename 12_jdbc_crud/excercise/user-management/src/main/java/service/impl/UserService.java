@@ -5,7 +5,6 @@ import repository.IUserRepository;
 import repository.impl.UserRepository;
 import service.IUserService;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public class UserService implements IUserService {
