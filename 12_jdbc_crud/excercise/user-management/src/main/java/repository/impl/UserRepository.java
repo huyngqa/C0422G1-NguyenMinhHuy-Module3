@@ -25,7 +25,6 @@ public class UserRepository implements IUserRepository {
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getEmail());
             preparedStatement.setString(3, user.getCountry());
-            System.out.println(preparedStatement);
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -39,7 +38,6 @@ public class UserRepository implements IUserRepository {
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_USER_BY_ID);
             preparedStatement.setInt(1, id);
-            System.out.println(preparedStatement);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
                 String name = rs.getString("name");
