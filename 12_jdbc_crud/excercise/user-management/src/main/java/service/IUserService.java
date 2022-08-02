@@ -17,4 +17,6 @@ public interface IUserService {
 
     List<User> findByCountry(String country);
 
+    List<User> sortUserByName();
+
 }

@@ -72,8 +72,7 @@ public class UserServlet extends HttpServlet {
     }
 
     private void sortUserByName(HttpServletRequest request, HttpServletResponse response) {
-        List<User> users = userService.selectAllUsers();
-        Collections.sort(users);
+        List<User> users = userService.sortUserByName();
         request.setAttribute("listUser", users);
         RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");
         try {

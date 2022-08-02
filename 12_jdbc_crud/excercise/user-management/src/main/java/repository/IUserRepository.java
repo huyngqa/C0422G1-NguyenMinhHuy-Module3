@@ -16,4 +16,6 @@ public interface IUserRepository {
     boolean updateUser(User user);
 
     List<User> findByCountry(String country);
+
+    List<User> sortUserByName();
 }
