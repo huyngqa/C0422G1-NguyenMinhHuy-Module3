@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4370aab2-8a32-4ba9-b93f-26973cba4a36" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/config/FilterUTF8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/controller/UserServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/repository/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/repository/IUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/repository/impl/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/service/impl/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/webapp/user/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/webapp/user/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/config/FilterUTF8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../08_bootstrap/excercise/excer2/css/mystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../08_bootstrap/excercise/excer2/css/mystyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_on_review/src/main/java/practice/practice1/ServerTimeServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_reviews/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_reviews/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_reviews/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_reviews/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_reviews/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_reviews/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_reviews/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_reviews/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_reviews/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../10_jsp_/practice/convert-currency/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../10_jsp_/practice/convert-currency/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../10_jsp_/practice/convert-currency/src/main/webapp/converter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../10_jsp_/practice/convert-currency/src/main/webapp/converter.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../10_jsp_/practice/simple-dictionary-jsp/src/main/webapp/dictionary.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../10_jsp_/practice/simple-dictionary-jsp/src/main/webapp/dictionary.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../12_jdbc_crud/excercise/user-management/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/excercise/user-management/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../12_jdbc_crud/excercise/user-management/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/excercise/user-management/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../12_jdbc_crud/excercise/user-management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/excercise/user-management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/controller/ProductServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/repository/IProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/repository/impl/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/service/IProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/service/impl/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/controller/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/controller/UserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/dao/IUserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/dao/impl/UserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/model/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/repository/IUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/repository/IUserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/repository/impl/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/repository/impl/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/service/IUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/service/impl/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/service/impl/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/servlet/DisplayCustomerServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/img/anh1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/img/anh2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/img/anh3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/img/anh4.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/img/anh5.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/user/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/view/customer/display.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/view/product/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/view/product/details.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/view/product/update.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/furama.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/furama.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2CpnvqEL2CpXIJFR4oYgKBxWlYQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4370aab2-8a32-4ba9-b93f-26973cba4a36" name="Changes" comment="" />
+      <created>1659508631338</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659508631338</updated>
+      <workItem from="1659508640099" duration="1000" />
+    </task>
+    <servers />
+  </component>
+</project>
