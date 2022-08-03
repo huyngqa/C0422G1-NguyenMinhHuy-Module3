@@ -18,4 +18,14 @@ public interface IUserRepository {
     List<User> findByCountry(String country);
 
     List<User> sortUserByName();
+
+    User getUserById(int id);
+
+    void insertUserStore(User user);
+
+    void addUserTransaction(User user, int[] permissions);
+
+    void insertUpdateWithoutTransaction();
+
+    void insertUpdateUseTransaction();
 }

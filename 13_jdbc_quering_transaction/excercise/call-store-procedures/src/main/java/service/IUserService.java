@@ -5,9 +5,6 @@ import model.User;
 import java.util.List;
 
 public interface IUserService {
-    void insertUser(User user);
-
-    User selectUser(int id);
 
     List<User> selectAllUsers();
 

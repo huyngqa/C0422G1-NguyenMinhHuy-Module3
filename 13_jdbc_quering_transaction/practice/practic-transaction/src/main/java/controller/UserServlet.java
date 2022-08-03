@@ -42,6 +42,15 @@ public class UserServlet extends HttpServlet {
             case "sort":
                 sortUserByName(request, response);
                 break;
+            case "permission":
+                addUserPermission(request, response);
+                break;
+            case "test-without-tran":
+                testWithoutTran(request, response);
+                break;
+            case "test-use-tran":
+                testUseTran(request, response);
+                break;
             default:
                 listUser(request, response);
                 break;
@@ -71,6 +80,15 @@ public class UserServlet extends HttpServlet {
         }
     }
 
+
+    private void testUseTran(HttpServletRequest request, HttpServletResponse response) {
+        userService.insertUpdateUseTransaction();
+    }
+
+    private void testWithoutTran(HttpServletRequest request, HttpServletResponse response) {
+        userService.insertUpdateWithoutTransaction();
+    }
+
     private void sortUserByName(HttpServletRequest request, HttpServletResponse response) {
         List<User> users = userService.sortUserByName();
         request.setAttribute("listUser", users);
@@ -83,6 +101,14 @@ public class UserServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
+
+
+    private void addUserPermission(HttpServletRequest request, HttpServletResponse response) {
+        User user = new User("quan", "quan.nguyen@codegym.vn", "vn");
+        int[] permission = {1, 2, 4};
+        userService.addUserTransaction(user, permission);
+    }
+
 
     private void findUserByCountry(HttpServletRequest request, HttpServletResponse response) {
         String country = request.getParameter("country");
@@ -124,7 +150,7 @@ public class UserServlet extends HttpServlet {
 
     private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
-        User existingUser = userService.selectUser(id);
+        User existingUser = userService.getUserById(id);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/edit.jsp");
         request.setAttribute("user", existingUser);
         try {
@@ -142,7 +168,7 @@ public class UserServlet extends HttpServlet {
         String email = request.getParameter("email");
         String country = request.getParameter("country");
         User newUser = new User(name, email, country);
-        userService.insertUser(newUser);
+        userService.insertUserStore(newUser);
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/create.jsp");
         try {
             dispatcher.forward(request, response);

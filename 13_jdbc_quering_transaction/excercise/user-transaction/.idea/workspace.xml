@@ -5,48 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4370aab2-8a32-4ba9-b93f-26973cba4a36" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../call-store-procedures/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../call-store-procedures/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../call-store-procedures/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../call-store-procedures/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../call-store-procedures/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../call-store-procedures/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../call-store-procedures/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../call-store-procedures/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../call-store-procedures/src/main/java/config/FilterUTF8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../call-store-procedures/src/main/java/controller/UserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../call-store-procedures/src/main/java/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../call-store-procedures/src/main/java/repository/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../call-store-procedures/src/main/java/repository/IUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../call-store-procedures/src/main/java/repository/impl/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../call-store-procedures/src/main/java/service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../call-store-procedures/src/main/java/service/impl/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../call-store-procedures/src/main/webapp/user/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../call-store-procedures/src/main/webapp/user/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/runConfigurations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/config/FilterUTF8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/controller/UserServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/repository/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/repository/IUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/repository/impl/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/service/impl/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/webapp/user/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/webapp/user/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/config/FilterUTF8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../08_bootstrap/excercise/excer2/css/mystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../08_bootstrap/excercise/excer2/css/mystyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../09_on_review/src/main/java/practice/practice1/ServerTimeServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/.idea/.gitignore" beforeDir="false" />
@@ -73,6 +31,21 @@
       <change beforePath="$PROJECT_DIR$/../../../12_jdbc_crud/excercise/user-management/.gradle/7.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/excercise/user-management/.gradle/7.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../12_jdbc_crud/excercise/user-management/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/excercise/user-management/.gradle/7.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../12_jdbc_crud/excercise/user-management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../12_jdbc_crud/excercise/user-management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../call-store-procedures/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../call-store-procedures/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../call-store-procedures/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../call-store-procedures/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../call-store-procedures/src/main/java/config/FilterUTF8.java" beforeDir="false" afterPath="$PROJECT_DIR$/../call-store-procedures/src/main/java/config/FilterUTF8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../call-store-procedures/src/main/java/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../call-store-procedures/src/main/java/controller/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../call-store-procedures/src/main/java/repository/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../call-store-procedures/src/main/java/repository/IUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../call-store-procedures/src/main/java/repository/impl/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../call-store-procedures/src/main/java/repository/impl/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../call-store-procedures/src/main/java/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../call-store-procedures/src/main/java/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../call-store-procedures/src/main/java/service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../call-store-procedures/src/main/java/service/impl/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/practic-transaction/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/config/FilterUTF8.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/config/FilterUTF8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/controller/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/repository/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/repository/IUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/repository/impl/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/repository/impl/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/practic-transaction/src/main/java/service/impl/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/controller/ProductServlet.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/model/Product.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/com/codegym/repository/IProductRepository.class" beforeDir="false" />
@@ -133,7 +106,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../call-store-procedures" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -248,7 +222,7 @@
       <updated>1659508631338</updated>
       <workItem from="1659508640099" duration="71000" />
       <workItem from="1659508823602" duration="5739000" />
-      <workItem from="1659515364870" duration="326000" />
+      <workItem from="1659515364870" duration="541000" />
     </task>
     <servers />
   </component>

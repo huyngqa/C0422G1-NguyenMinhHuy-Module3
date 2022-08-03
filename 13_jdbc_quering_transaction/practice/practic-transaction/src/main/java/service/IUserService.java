@@ -19,4 +19,13 @@ public interface IUserService {
 
     List<User> sortUserByName();
 
+    User getUserById(int id);
+
+    void insertUserStore(User user);
+
+    void addUserTransaction(User user, int[] permissions);
+
+    void insertUpdateWithoutTransaction();
+
+    void insertUpdateUseTransaction();
 }
