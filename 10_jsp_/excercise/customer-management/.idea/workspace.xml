@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a3b94769-33d0-41be-8754-f0d1d9fb127a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../08_bootstrap/excercise/excer2/css/mystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../08_bootstrap/excercise/excer2/css/mystyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_on_review/src/main/java/practice/practice1/ServerTimeServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_review/convert-currency/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_reviews/.gradle/7.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_reviews/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_reviews/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_reviews/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_reviews/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_reviews/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_reviews/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_reviews/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../09_web_on_reviews/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/convert-currency/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/convert-currency/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/convert-currency/src/main/webapp/converter.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/convert-currency/src/main/webapp/converter.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../practice/simple-dictionary-jsp/src/main/webapp/dictionary.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/simple-dictionary-jsp/src/main/webapp/dictionary.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/model/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/WEB-INF/classes/servlet/DisplayCustomerServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/img/anh1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/img/anh2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/img/anh3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/img/anh4.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/img/anh5.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../apache-tomcat-9.0.65/webapps/ROOT/view/customer/display.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/furama.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/furama.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2Cb52dc3XV2XIFmEtkQwpHiG9f6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a3b94769-33d0-41be-8754-f0d1d9fb127a" name="Changes" comment="" />
+      <created>1659058245875</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659058245875</updated>
+      <workItem from="1659058247344" duration="382000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

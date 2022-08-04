@@ -541,6 +541,7 @@ WHERE
 SET sql_safe_updates = 1;
 
 -- 18. Xóa những khách hàng có hợp đồng trước năm 2021 (chú ý ràng buộc giữa các bảng).
+SET sql_safe_updates = 0;
 SET FOREIGN_KEY_CHECKS=0;
 DELETE FROM khach_hang 
 WHERE
@@ -556,8 +557,8 @@ WHERE
         WHERE
             YEAR(ngay_lam_hop_dong) < 2021) AS tmp);
 SET FOREIGN_KEY_CHECKS=1;
-
--- 18. Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
+SET sql_safe_updates = 1;
+-- 19. Cập nhật giá cho các dịch vụ đi kèm được sử dụng trên 10 lần trong năm 2020 lên gấp đôi.
 SET SQL_SAFE_UPDATES = 0;
 UPDATE dich_vu_di_kem 
 SET 
@@ -601,6 +602,53 @@ FROM
     
 -- 21. Tạo khung nhìn có tên là v_nhan_vien để lấy được thông tin của tất cả các nhân viên có địa chỉ là “Yên Bái” 
 -- và đã từng lập hợp đồng cho một hoặc nhiều khách hàng bất kì với ngày lập hợp đồng là “12/12/2019”.
--- CREATE VIEW v_nhan_vien AS SELECT * FROM nhan_vien where dia_chi LIKE '%Yên Bái%' AND 
+CREATE VIEW v_nhan_vien AS
+    SELECT 
+        nv.*
+    FROM
+        nhan_vien nv
+            JOIN
+        hop_dong hd ON nv.ma_nhan_vien = hd.ma_nhan_vien
+    WHERE
+        dia_chi LIKE '%Yên Bái%'
+            AND ngay_lam_hop_dong = '2021-04-25';
 
+-- 21. Thông qua khung nhìn v_nhan_vien thực hiện cập nhật địa chỉ thành 'Liên Chiểu'
+-- đối với tất cả các nhân viên được nhìn thấy bởi khung nhìn này
+SET sql_safe_updates = 0;
+UPDATE v_nhan_vien 
+SET 
+    dia_chi = 'Liên Chiểu';
+SET sql_safe_updates = 1;
 
+-- 23. Tạo Stored Procedure sp_xoa_khach_hang dùng để xóa thông tin của một khách hàng nào đó với
+-- ma_khach_hang được truyền vào như là 1 tham số của sp_xoa_khach_hang.
+DELIMITER $$
+CREATE PROCEDURE sp_xoa_khach_hang(id INT)
+BEGIN
+   DELETE FROM khach_hang
+   WHERE ma_khach_hang = id;
+END $$
+DELIMITER ;
+-- gọi
+CALL sp_xoa_khach_hang(9);
+
+-- 24. Tạo Stored Procedure sp_them_moi_hop_dong dùng để thêm mới vào bảng hop_dong với yêu cầu sp_them_moi_hop_dong 
+-- phải thực hiện kiểm tra tính hợp lệ của dữ liệu bổ sung, với nguyên tắc không được trùng khóa 
+-- chính và đảm bảo toàn vẹn tham chiếu đến các bảng liên quan.
+DELIMITER $$
+CREATE PROCEDURE sp_them_moi_hop_dong(ngay_lam DATETIME, ngay_ket DATETIME, tien_dat_coc DOUBLE, ma_nhan_vien INT, ma_khach_hang INT, ma_dich_vu INT)
+BEGIN
+	INSERT INTO hop_dong (ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu)
+    VALUES (ngay_lam, ngay_ket, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu);
+END $$
+DELIMITER ;
+-- gọi
+CALL sp_them_moi_hop_dong ('2021-07-08', '2021-08-08', 0, 3, 2, 3);
+
+-- 25. Tạo Trigger có tên tr_xoa_hop_dong khi xóa bản ghi trong bảng hop_dong thì hiển thị tổng 
+-- số lượng bản ghi còn lại có trong bảng hop_dong ra giao diện console của database.
+DELIMITER $$
+CREATE TRIGGER tr_xoa_hop_dong 
+9
+DELIMITER ;
