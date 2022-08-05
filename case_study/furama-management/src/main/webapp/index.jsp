@@ -6,29 +6,26 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@include file="view/include/header.jsp" %>
 <html>
 <head>
     <title>Furama</title>
     <link rel="stylesheet" href="resources/css/bootstrap.min.css">
 </head>
 <body>
+<%@ include file="view/include/header.jsp" %>
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12 col-sm-12" id="home">
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="resources/img/bgh1.jpg" class="d-block w-100 img-fluid" alt="...">
+                        <img src="resources/img/bg1.jpg" class="d-block w-100 img-fluid" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="resources/img/bgh2.jpg" class="d-block w-100 img-fluid" alt="...">
+                        <img src="resources/img/bg2.jpg" class="d-block w-100 img-fluid" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="resources/img/bgh3.jpg" class="d-block w-100 img-fluid" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="resources/img/bgh4.jpg" class="d-block w-100 img-fluid" alt="...">
+                        <img src="resources/img/bg3.jpg" class="d-block w-100 img-fluid" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -70,21 +67,8 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12 col-sm-12">
-            <div class="card">
-                <div class="card-header bg-success">
-                    Furama Resort
-                </div>
-                <div class="card-body bg-light" id="color-foot">
-                    <h5 class="card-title">Thank you so much!</h5>
-                    <p class="card-text">Hẹn quý khách vào những ngày tới.</p>
-                    <a href="#" class="btn btn-primary">Go home</a>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
+<%@ include file="view/include/footer.jsp" %>
 <script src="https://kit.fontawesome.com/d6e19ea644.js" crossorigin="anonymous"></script>
 <script src="resources/js/bootstrap.min.js"></script>
 </body>

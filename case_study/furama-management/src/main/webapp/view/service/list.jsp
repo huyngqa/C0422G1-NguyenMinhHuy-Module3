@@ -7,7 +7,6 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@include file="../include/header.jsp" %>
 <html>
 <head>
     <title>Furama</title>
@@ -18,6 +17,7 @@
     <link rel="stylesheet" href="../../resources/css/list-style.css">
 </head>
 <body>
+<%@ include file="../include/header.jsp" %>
 <div class="table-title w-100 m-0">
     <div class="row">
         <div class="col-sm-6">
@@ -53,9 +53,9 @@
             <td>Ngày</td>
             <td>Room</td>
             <td>
-                <a href="#editEmployeeModal" class="btn btn-primary text-light" data-toggle="modal"><i class="material-icons"
+                <a href="#editServiceModal" class="btn btn-primary text-light" data-toggle="modal"><i class="material-icons"
                                                                                                        data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteEmployeeModal">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteServiceModal">
                     <i class="material-icons"
                        data-toggle="tooltip"
                        title="Delete">&#xE872;</i>
@@ -73,7 +73,7 @@
             <td>
                 <a href="#editEmployeeModal" class="btn btn-primary text-light" data-toggle="modal"><i class="material-icons"
                                                                                                        data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteEmployeeModal">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteServiceModal">
                     <i class="material-icons"
                        data-toggle="tooltip"
                        title="Delete">&#xE872;</i>
@@ -91,7 +91,7 @@
             <td>
                 <a href="#editEmployeeModal" class="btn btn-primary text-light" data-toggle="modal"><i class="material-icons"
                                                                                                        data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteEmployeeModal">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteServiceModal">
                     <i class="material-icons"
                        data-toggle="tooltip"
                        title="Delete">&#xE872;</i>
@@ -109,7 +109,7 @@
             <td>
                 <a href="#editEmployeeModal" class="btn btn-primary text-light" data-toggle="modal"><i class="material-icons"
                                                                                                        data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteEmployeeModal">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteServiceModal">
                     <i class="material-icons"
                        data-toggle="tooltip"
                        title="Delete">&#xE872;</i>
@@ -120,7 +120,7 @@
     </table>
 </div>
 
-<div class="modal fade" id="deleteEmployeeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteServiceModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -137,6 +137,7 @@
         </div>
     </div>
 </div>
+<%@ include file="../include/footer.jsp" %>
 <script src="../../resources/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 </body>
