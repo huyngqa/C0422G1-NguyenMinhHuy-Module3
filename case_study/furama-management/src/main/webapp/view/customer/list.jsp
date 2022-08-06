@@ -24,14 +24,13 @@
             <h2>Manage <b>Customer</b></h2>
         </div>
         <div class="col-sm-6">
-            <a href="add.jsp" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i>
+            <a href="/customer?actionCustomer=add" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i>
                 <span>Add New Customer</span></a>
         </div>
     </div>
 </div>
 <div class="table-responsive p-0 m-0 w-100">
     <table class="table">
-        <thead>
         <tr>
             <th>ID</th>
             <th>Type Customer</th>
@@ -44,89 +43,28 @@
             <th>Address</th>
             <th>Actions</th>
         </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>KH001</td>
-            <td>Diamond</td>
-            <td>Nguyễn Minh Huy</td>
-            <td>20-02-1999</td>
-            <td>Nam</td>
-            <td>0394827123</td>
-            <td>09374852133</td>
-            <td>thomashardy@mail.com</td>
-            <td>Nguyen Tat Thanh Street</td>
-            <td>
-                <a href="#editEmployeeModal" class="btn btn-primary text-light" data-toggle="modal"><i class="material-icons"
-                                                                                                       data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteCustomerModal">
-                    <i class="material-icons"
-                       data-toggle="tooltip"
-                       title="Delete">&#xE872;</i>
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td>KH001</td>
-            <td>Diamond</td>
-            <td>Nguyễn Minh Huy</td>
-            <td>20-02-1999</td>
-            <td>Nam</td>
-            <td>0394827123</td>
-            <td>09374852133</td>
-            <td>thomashardy@mail.com</td>
-            <td>Nguyen Tat Thanh Street</td>
-            <td>
-                <a href="#editEmployeeModal" class="btn btn-primary text-light" data-toggle="modal"><i class="material-icons"
-                                                                                                       data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteCustomerModal">
-                    <i class="material-icons"
-                       data-toggle="tooltip"
-                       title="Delete">&#xE872;</i>
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td>KH001</td>
-            <td>Diamond</td>
-            <td>Nguyễn Minh Huy</td>
-            <td>20-02-1999</td>
-            <td>Nam</td>
-            <td>0394827123</td>
-            <td>09374852133</td>
-            <td>thomashardy@mail.com</td>
-            <td>Nguyen Tat Thanh Street</td>
-            <td>
-                <a href="#editEmployeeModal" class="btn btn-primary text-light" data-toggle="modal"><i class="material-icons"
-                                                                                                       data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteCustomerModal">
-                    <i class="material-icons"
-                       data-toggle="tooltip"
-                       title="Delete">&#xE872;</i>
-                </button>
-            </td>
-        </tr>
-        <tr>
-            <td>KH001</td>
-            <td>Diamond</td>
-            <td>Nguyễn Minh Huy</td>
-            <td>20-02-1999</td>
-            <td>Nam</td>
-            <td>0394827123</td>
-            <td>09374852133</td>
-            <td>thomashardy@mail.com</td>
-            <td>Nguyen Tat Thanh Street</td>
-            <td>
-                <a href="#editEmployeeModal" class="btn btn-primary text-light" data-toggle="modal"><i class="material-icons"
-                                                                                                       data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteCustomerModal">
-                    <i class="material-icons"
-                       data-toggle="tooltip"
-                       title="Delete">&#xE872;</i>
-                </button>
-            </td>
-        </tr>
-        </tbody>
+        <c:forEach items="${customers}" var="customer" >
+            <tr>
+                <td>${customer.personId}</td>
+                <td>${customer.typeCustomerName.typeCustomerName}</td>
+                <td>${customer.name}</td>
+                <td>${customer.dateOfBirth}</td>
+                <td>${customer.gender}</td>
+                <td>${customer.identityCardNumber}</td>
+                <td>${customer.tel}</td>
+                <td>${customer.email}</td>
+                <td>${customer.address}</td>
+                <td>
+                    <a href="#editEmployeeModal" class="btn btn-primary text-light" data-toggle="modal"><i class="material-icons"
+                                                                                                           data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteCustomerModal">
+                        <i class="material-icons"
+                           data-toggle="tooltip"
+                           title="Delete">&#xE872;</i>
+                    </button>
+                </td>
+            </tr>
+        </c:forEach>
     </table>
 </div>
 
