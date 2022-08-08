@@ -49,10 +49,10 @@
                     <select class="form-dropdown validate[required]" id="input_314" name="type_customer"
                             style="width:150px" data-component="dropdown" required="">
                         <c:forEach var="typeCustomer" items="${typeCustomerList}">
-                            <c:if test="${typeCustomerId != typeCustomer.typeCustomerId}">
+                            <c:if test="${customer.typeCustomerName.typeCustomerId != typeCustomer.typeCustomerId}">
                                 <option value="${typeCustomer.typeCustomerId}">${typeCustomer.typeCustomerName}</option>
                             </c:if>
-                            <c:if test="${typeCustomerId == typeCustomer.typeCustomerId}">
+                            <c:if test="${customer.typeCustomerName.typeCustomerId == typeCustomer.typeCustomerId}">
                                 <option selected value="${typeCustomer.typeCustomerId}">${typeCustomer.typeCustomerName}</option>
                             </c:if>
                         </c:forEach>
@@ -69,7 +69,7 @@
                 <div id="cid_324" class="form-input jf-required">
           <span class="form-sub-label-container" style="vertical-align:top">
             <input type="text" id="input_324" name="name" class="form-textbox validate[required, day-name-cell]"
-                   data-defaultvalue="" size="50" value="${name}" data-component="name"
+                   data-defaultvalue="" size="50" value="${customer.name}" data-component="name"
                    aria-labelledby="label_324 sublabel_input_324" required=""/>
             <label class="form-sub-label" for="input_324" id="sublabel_input_324" style="min-height:13px"
                    aria-hidden="false"> Full name </label>
@@ -88,7 +88,7 @@
                         <span class="form-sub-label-container" style="vertical-align:top">
             <input type="date" id="input_7_day" name="birth_day" data-type="mask-number"
                    class="mask-phone-number form-textbox validate[required, Fill Mask]" data-defaultvalue=""
-                   autoComplete="section-input_311 on" data-masked="true" value="${birtDay}" data-component="phone"
+                   autoComplete="section-input_311 on" data-masked="true" value="${customer.dateOfBirth}" data-component="phone"
                    aria-labelledby="label_311" required=""/>
             <label class="form-sub-label" for="input_7_day" id="sub_lable_7_day" style="min-height:13px"
                    aria-hidden="false">  </label>
@@ -96,7 +96,7 @@
                     </div>
                 </div>
             </li>
-            <c:if test="${gender}">
+            <c:if test="${customer.gender}">
                 <li class="form-line jf-required" data-type="control_radio" id="id_313">
                     <label class="form-label form-label-left form-label-auto" id="label_313" for="input_313_0">
                         Gender
@@ -124,7 +124,7 @@
                     </div>
                 </li>
             </c:if>
-            <c:if test="${!gender}">
+            <c:if test="${!customer.gender}">
                 <li class="form-line jf-required" data-type="control_radio" id="id_313">
                     <label class="form-label form-label-left form-label-auto" id="label_313_false" for="input_313_0">
                         Gender
@@ -163,7 +163,7 @@
           <span class="form-sub-label-container" style="vertical-align:top">
             <input type="text" id="input_311_full" name="id_card" data-type="mask-number"
                    class="mask-phone-number form-textbox validate[required, Fill Mask]" data-defaultvalue=""
-                   autoComplete="section-input_311 on" data-masked="true" value="${idCard}" data-component="phone"
+                   autoComplete="section-input_311 on" data-masked="true" value="${customer.identityCardNumber}" data-component="phone"
                    aria-labelledby="label_311" required=""/>
             <label class="form-sub-label" for="input_311_full" id="sublabel_311_masked" style="min-height:13px"
                    aria-hidden="false">  </label>
@@ -181,7 +181,7 @@
           <span class="form-sub-label-container" style="vertical-align:top">
             <input type="tel" id="input_6_full" name="tel" data-type="mask-number"
                    class="mask-phone-number form-textbox validate[required, Fill Mask]" data-defaultvalue=""
-                   autoComplete="section-input_6 tel-national" data-masked="true" value="${tel}" data-component="phone"
+                   autoComplete="section-input_6 tel-national" data-masked="true" value="${customer.tel}" data-component="phone"
                    aria-labelledby="label_6" required=""/>
             <label class="form-sub-label" for="input_6_full" id="sublabel_6_masked" style="min-height:13px"
                    aria-hidden="false">  </label>
@@ -193,7 +193,7 @@
                     Address: </label>
                 <div id="cid_5" class="form-input">
                     <input type="email" id="input_5" name="email" class="form-textbox validate[Email]"
-                           data-defaultvalue="" size="30" value="${email}" placeholder="ex: myname@example.com"
+                           data-defaultvalue="" size="30" value="${customer.email}" placeholder="ex: myname@example.com"
                            data-component="email" aria-labelledby="label_5"/>
                 </div>
             </li>
@@ -211,7 +211,7 @@
                 <span class="form-sub-label-container" style="vertical-align:top">
                   <input type="text" id="input_4_addr_line1" name="address"
                          class="form-textbox validate[required] form-address-line" data-defaultvalue=""
-                         autoComplete="section-input_4 address-line1" value="${address}" data-component="address_line_1"
+                         autoComplete="section-input_4 address-line1" value="${customer.address}" data-component="address_line_1"
                          aria-labelledby="label_4 sublabel_4_addr_line1" required=""/>
                   <label class="form-sub-label" for="input_4_addr_line1" id="sublabel_4_addr_line1"
                          style="min-height:13px" aria-hidden="false"> Street Address </label>

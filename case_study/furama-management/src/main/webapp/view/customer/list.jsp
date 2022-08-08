@@ -24,7 +24,13 @@
         <div class="col-sm-6">
             <h2>Manage <b>Customer</b></h2>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-3">
+            <form action="/customer?actionCustomer=search" method="post">
+                <input type="text" name="searchCustomer" placeholder="Enter customer name">
+                <button type="submit" class="btn btn-success"> Search </button>
+            </form>
+        </div>
+        <div class="col-sm-3">
             <a href="/customer?actionCustomer=add" class="btn btn-success" data-toggle="modal"><i
                     class="material-icons">&#xE147;</i>
                 <span>Add New Customer</span></a>

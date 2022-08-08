@@ -31,6 +31,7 @@ public class CustomerServlet extends HttpServlet {
                 break;
             case "edit":
                 showFormEditCustomer(request, response);
+                break;
             default:
                 showListCustomer(request, response);
         }
@@ -51,6 +52,9 @@ public class CustomerServlet extends HttpServlet {
                 break;
             case "delete":
                 deleteCustomer(request, response);
+                break;
+            case "search":
+                searchCustomerByName(request, response);
                 break;
         }
     }
@@ -86,14 +90,7 @@ public class CustomerServlet extends HttpServlet {
         request.setAttribute("typeCustomerList", typeCustomerList);
         int id = Integer.parseInt(request.getParameter("id"));
         Customer customer = customerService.findCustomerById(id);
-        request.setAttribute("typeCustomerId", customer.getTypeCustomerName().getTypeCustomerId());
-        request.setAttribute("name", customer.getName());
-        request.setAttribute("birtDay", customer.getDateOfBirth());
-        request.setAttribute("gender", customer.isGender());
-        request.setAttribute("idCard", customer.getIdentityCardNumber());
-        request.setAttribute("tel", customer.getTel());
-        request.setAttribute("email", customer.getEmail());
-        request.setAttribute("address", customer.getAddress());
+        request.setAttribute("customer", customer);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/customer/edit.jsp");
         try {
             dispatcher.forward(request, response);
@@ -153,5 +150,19 @@ public class CustomerServlet extends HttpServlet {
             request.setAttribute("message", "Failed process");
         }
         showListCustomer(request, response);
+    }
+
+    private void searchCustomerByName(HttpServletRequest request, HttpServletResponse response) {
+        String searchName = request.getParameter("searchCustomer");
+        List<Customer> customers = customerService.searchCustomerByName(searchName);
+        request.setAttribute("customers", customers);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("view/customer/list.jsp");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

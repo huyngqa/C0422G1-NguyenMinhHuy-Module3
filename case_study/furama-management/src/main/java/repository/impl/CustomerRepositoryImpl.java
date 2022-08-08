@@ -22,6 +22,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     private final String SELECT_CUSTOMER_BY_ID_QUERY = "select * from khach_hang where ma_khach_hang = ?";
     private final String UPDATE_CUSTOMER_QUERY = "update khach_hang set ma_loai_khach = ?, ho_ten = ?, ngay_sinh = ?, gioi_tinh = ?, so_cmnd = ?, so_dien_thoai =? , email = ?, dia_chi = ? " +
             "where ma_khach_hang = ?";
+    private final String SEARCH_CUSTOMER_BY_NAME_QUERY = "select * from khach_hang where ho_ten like ?";
 
 
     @Override
@@ -130,6 +131,33 @@ public class CustomerRepositoryImpl implements CustomerRepository {
             e.printStackTrace();
         }
         return false;
+    }
+
+    @Override
+    public List<Customer> searchCustomerByName(String search) {
+        List<Customer> customers = new ArrayList<>();
+        Connection connection = ConnectDB.getConnectDB();
+        try {
+            PreparedStatement statement = connection.prepareStatement(SEARCH_CUSTOMER_BY_NAME_QUERY);
+            statement.setString(1, "%" + search+"%");
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()) {
+                int id = resultSet.getInt("ma_khach_hang");
+                String name = resultSet.getString("ho_ten");
+                LocalDate birthDay = LocalDate.parse(resultSet.getString("ngay_sinh"), DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+                String identityCard = resultSet.getString("so_cmnd");
+                String tel = resultSet.getString("so_dien_thoai");
+                String email = resultSet.getString("email");
+                String address = resultSet.getString("dia_chi");
+                int typeCustomerId = resultSet.getInt("ma_loai_khach");
+                TypeCustomer typeCustomer = typeCustomerRepository.getTypeCustomerById(typeCustomerId);
+                boolean gender = resultSet.getBoolean("gioi_tinh");
+                customers.add(new Customer(id, name, birthDay, identityCard, tel, email, address, typeCustomer, gender));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return customers;
     }
 
 

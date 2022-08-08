@@ -624,10 +624,12 @@ SET sql_safe_updates = 1;
 -- 23. Tạo Stored Procedure sp_xoa_khach_hang dùng để xóa thông tin của một khách hàng nào đó với
 -- ma_khach_hang được truyền vào như là 1 tham số của sp_xoa_khach_hang.
 DELIMITER $$
-CREATE PROCEDURE sp_xoa_khach_hang(id INT)
+CREATE PROCEDURE sp_xoa_khach_hang(IN id INT)
 BEGIN
+   SET FOREIGN_KEY_CHECKS=0;
    DELETE FROM khach_hang
    WHERE ma_khach_hang = id;
+   SET FOREIGN_KEY_CHECKS=1;
 END $$
 DELIMITER ;
 -- gọi

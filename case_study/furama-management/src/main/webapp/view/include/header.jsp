@@ -73,7 +73,7 @@
                         <a class="nav-link text-light" href="/customer">Customer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#">Service</a>
+                        <a class="nav-link text-light" href="/service">Service</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="#">Contract</a>

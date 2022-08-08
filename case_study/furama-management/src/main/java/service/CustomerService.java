@@ -10,4 +10,5 @@ public interface CustomerService {
     boolean editCustomer(Customer customer);
     Customer findCustomerById(int customerId);
     boolean deleteCustomerById(int customerId);
+    List<Customer> searchCustomerByName(String search);
 }
