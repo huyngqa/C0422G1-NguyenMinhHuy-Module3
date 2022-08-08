@@ -23,7 +23,14 @@ public abstract class Person {
         this.email = email;
         this.address = address;
     }
-
+    public Person(String name, LocalDate dateOfBirth, String identityCardNumber, String tel, String email, String address) {
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.identityCardNumber = identityCardNumber;
+        this.tel = tel;
+        this.email = email;
+        this.address = address;
+    }
     public int getPersonId() {
         return personId;
     }

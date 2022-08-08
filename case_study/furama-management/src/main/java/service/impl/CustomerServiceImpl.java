@@ -8,7 +8,8 @@ import service.CustomerService;
 import java.util.List;
 
 public class CustomerServiceImpl implements CustomerService {
-    CustomerRepository customerRepository = new CustomerRepositoryImpl();
+    private CustomerRepository customerRepository = new CustomerRepositoryImpl();
+
     @Override
     public List<Customer> findAllCustomer() {
         return customerRepository.findAllCustomer();
@@ -16,16 +17,21 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public boolean addNewCustomer(Customer customer) {
-        return false;
+        return customerRepository.addNewCustomer(customer);
     }
 
     @Override
     public boolean editCustomer(Customer customer) {
-        return false;
+        return customerRepository.editCustomer(customer);
     }
 
     @Override
     public Customer findCustomerById(int customerId) {
-        return null;
+        return customerRepository.findCustomerById(customerId);
+    }
+
+    @Override
+    public boolean deleteCustomerById(int customerId) {
+        return customerRepository.deleteCustomerById(customerId);
     }
 }
