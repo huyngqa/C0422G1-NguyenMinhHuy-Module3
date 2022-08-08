@@ -42,7 +42,75 @@ public class FacilityServlet extends HttpServlet {
             case "add":
                 addNewService(request, response);
                 break;
+            case "edit":
+                editService(request,response);
+                break;
+            case "delete":
+                deleteFacility(request, response);
+                break;
+            case "search":
+                searchFacilityByName(request, response);
+                break;
         }
+    }
+
+    private void searchFacilityByName(HttpServletRequest request, HttpServletResponse response) {
+        String searchName = request.getParameter("searchService");
+        List<Facility> facilities = facilityService.searchFacilityByName(searchName);
+        request.setAttribute("facilities", facilities);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("view/service/list.jsp");
+        try {
+            dispatcher.forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void deleteFacility(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("deleteId"));
+        facilityService.deleteFacilityById(id);
+        try {
+            response.sendRedirect("/service");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void editService(HttpServletRequest request, HttpServletResponse response) {
+        Facility facility;
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        double area = Double.parseDouble(request.getParameter("area"));
+        int cost = Integer.parseInt(request.getParameter("cost"));
+        int maxPeople = Integer.parseInt(request.getParameter("max_people"));
+        int rentType = Integer.parseInt(request.getParameter("rent_type"));
+        RentalType rentalType = typeFacilityService.getRentalTypeById(rentType);
+        int facilityType = Integer.parseInt(request.getParameter("service_type"));
+        TypeFacility typeFacility = typeFacilityService.getTypeOfFacilityById(facilityType);
+        if(facilityType==1) {
+            String standardRoom = request.getParameter("standard_room");
+            String descriptionOtherConvenience = request.getParameter("description_other_convenience");
+            double poolArea = Double.parseDouble(request.getParameter("pool_area"));
+            int numOfFloor = Integer.parseInt(request.getParameter("number_of_floors"));
+            facility = new Villa(id, name, area, cost, maxPeople, rentalType, typeFacility, standardRoom, descriptionOtherConvenience,poolArea,numOfFloor);
+        } else if(facilityType == 2) {
+            String standardRoom = request.getParameter("standard_room");
+            String descriptionOtherConvenience = request.getParameter("description_other_convenience");
+            int numOfFloor = Integer.parseInt(request.getParameter("number_of_floors"));
+            facility = new House(id, name, area, cost, maxPeople, rentalType, typeFacility, standardRoom, descriptionOtherConvenience,numOfFloor);
+        } else {
+            String facilityFree = request.getParameter("facility_free");
+            facility = new Room(id, name, area, cost, maxPeople, rentalType, typeFacility, facilityFree);
+        }
+        boolean checkAdd = facilityService.editFacility(facility);
+        if(checkAdd) {
+            request.setAttribute("message", "Successfully edit service: " + name);
+        } else {
+            request.setAttribute("message", "Failed process");
+        }
+        showListFacility(request, response);
     }
 
     private void addNewService(HttpServletRequest request, HttpServletResponse response) {

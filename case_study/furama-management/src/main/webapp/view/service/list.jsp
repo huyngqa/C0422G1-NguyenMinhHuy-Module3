@@ -87,10 +87,13 @@
                     <td>${facility.facilityFree}</td>
                 </c:if>
                 <td>
-                    <a href="/service?actionService=edit&id=${facility.facilityId}" class="btn btn-primary text-light" data-toggle="modal"><i
+                    <a href="/service?actionService=edit&id=${facility.facilityId}" class="btn btn-primary text-light"
+                       data-toggle="modal"><i
                             class="material-icons"
                             data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                    <button type="button"
+                            onclick="displayCustomerInModal('${facility.facilityId}','${facility.facilityName}')"
+                            class="btn btn-primary" data-bs-toggle="modal"
                             data-bs-target="#deleteServiceModal">
                         <i class="material-icons"
                            data-toggle="tooltip"
@@ -102,25 +105,36 @@
         </tbody>
     </table>
 </div>
-
+<c:if test="${message != null}">
+    <p>${message}</p>
+</c:if>
 <div class="modal fade" id="deleteServiceModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+            <form action="/service?actionService=delete" method="post">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" hidden id="deleteId" name="deleteId">
+                    Do you want to delete a service: <span id="deleteName"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">DELETE</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
 <%@ include file="../include/footer.jsp" %>
+<script>
+    function displayCustomerInModal(id, name) {
+        document.getElementById("deleteId").value = id;
+        document.getElementById("deleteName").innerText = name;
+    }
+</script>
 <script src="../../resources/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="../../resources/jquery/jquery-3.5.1.min.js"></script>

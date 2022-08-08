@@ -27,16 +27,16 @@ public class FacilityServiceImpl implements FacilityService {
 
     @Override
     public boolean editFacility(Facility facility) {
-        return false;
+        return facilityRepository.editFacility(facility);
     }
 
     @Override
     public boolean deleteFacilityById(int facilityId) {
-        return false;
+        return facilityRepository.deleteFacilityById(facilityId);
     }
 
     @Override
     public List<Facility> searchFacilityByName(String search) {
-        return null;
+        return facilityRepository.searchFacilityByName(search);
     }
 }

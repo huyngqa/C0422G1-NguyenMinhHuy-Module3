@@ -16,7 +16,7 @@
 <%@ include file="../include/header.jsp" %>
 <div class="container-fluid">
     <h3 class="text-black-">Edit Service</h3>
-    <form class="row g-3" action="" method="post">
+    <form class="row g-3" method="post">
         <div class="col-md-12">
             <label for="name" class="form-label">Name Service</label>
             <input type="text" class="form-control" id="name" name="name" value="${facility.facilityName}">
