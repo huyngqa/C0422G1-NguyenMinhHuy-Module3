@@ -11,6 +11,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "FacilityServlet", value = "/service")
 public class FacilityServlet extends HttpServlet {
@@ -104,13 +105,16 @@ public class FacilityServlet extends HttpServlet {
             String facilityFree = request.getParameter("facility_free");
             facility = new Room(id, name, area, cost, maxPeople, rentalType, typeFacility, facilityFree);
         }
-        boolean checkAdd = facilityService.editFacility(facility);
-        if(checkAdd) {
-            request.setAttribute("message", "Successfully edit service: " + name);
+        Map<String, String> errMap = facilityService.editFacility(facility);
+        if (errMap.size() > 0) {
+            for (String str : errMap.keySet()) {
+                request.setAttribute(str, errMap.get(str));
+            }
+            showFormEditService(request, response);
         } else {
-            request.setAttribute("message", "Failed process");
+            request.setAttribute("message", "Successfully added customer: " + name);
+            showListFacility(request, response);
         }
-        showListFacility(request, response);
     }
 
     private void addNewService(HttpServletRequest request, HttpServletResponse response) {
@@ -127,25 +131,36 @@ public class FacilityServlet extends HttpServlet {
             String standardRoom = request.getParameter("standard_room");
             String descriptionOtherConvenience = request.getParameter("description_other_convenience");
             double poolArea = Double.parseDouble(request.getParameter("pool_area"));
-            int numOfFloor = Integer.parseInt(request.getParameter("number_of_floors"));
+            int numOfFloor;
+            try {
+                numOfFloor = Integer.parseInt(request.getParameter("number_of_floors"));
+            } catch (Exception e) {
+                numOfFloor = 0;
+            }
             facility = new Villa(name, area, cost, maxPeople, rentalType, typeFacility, standardRoom, descriptionOtherConvenience,poolArea,numOfFloor);
         } else if(facilityType == 2) {
             String standardRoom = request.getParameter("standard_room");
             String descriptionOtherConvenience = request.getParameter("description_other_convenience");
-            int numOfFloor = Integer.parseInt(request.getParameter("number_of_floors"));
+            int numOfFloor;
+            try {
+                numOfFloor = Integer.parseInt(request.getParameter("number_of_floors"));
+            } catch (Exception e) {
+                numOfFloor = 0;
+            }
             facility = new House(name, area, cost, maxPeople, rentalType, typeFacility, standardRoom, descriptionOtherConvenience,numOfFloor);
         } else {
             String facilityFree = request.getParameter("facility_free");
             facility = new Room(name, area, cost, maxPeople, rentalType, typeFacility, facilityFree);
         }
-        boolean checkAdd = facilityService.addNewFacility(facility);
-        if(checkAdd) {
-            request.setAttribute("message", "Successfully added service: " + name);
+        Map<String, String> errMap = facilityService.addNewFacility(facility);
+        if (errMap.size() > 0) {
+            for (String str : errMap.keySet()) {
+                request.setAttribute(str, errMap.get(str));
+            }
         } else {
-            request.setAttribute("message", "Failed process");
+            request.setAttribute("message", "Successfully added service: " + name);
         }
         showFormAddService(request, response);
-
     }
 
     private void showListFacility(HttpServletRequest request, HttpServletResponse response) {

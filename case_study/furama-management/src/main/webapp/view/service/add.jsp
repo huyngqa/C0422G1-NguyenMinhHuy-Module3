@@ -20,6 +20,7 @@
         <div class="col-md-12">
             <label for="name" class="form-label">Name Service</label>
             <input type="text" class="form-control" id="name" name="name">
+            <p class="text-danger">${nameErr}</p>
         </div>
         <div class="col-md-12">
             <label for="area" class="form-label">Area</label>
@@ -68,6 +69,7 @@
         <div class="col-md-12" id="floors" style="display: block">
             <label for="number_of_floors" class="form-label">Number of floors </label>
             <input type="number" class="form-control" id="number_of_floors" name="number_of_floors">
+            <p class="text-danger">${floorErr}</p>
         </div>
 
         <div class="col-md-12 " id="sv-free" style="display: none">

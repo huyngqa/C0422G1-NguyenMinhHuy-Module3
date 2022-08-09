@@ -73,6 +73,7 @@
                    aria-labelledby="label_324 sublabel_input_324" required=""/>
             <label class="form-sub-label" for="input_324" id="sublabel_input_324" style="min-height:13px"
                    aria-hidden="false"> Full name </label>
+              <span class="text-danger">${nameErr}</span>
           </span>
                 </div>
             </li>
@@ -92,6 +93,7 @@
                    aria-labelledby="label_311" required=""/>
             <label class="form-sub-label" for="input_7_day" id="sub_lable_7_day" style="min-height:13px"
                    aria-hidden="false">  </label>
+                            <span class="text-danger">${dayOfBirthErr}</span>
           </span>
                     </div>
                 </div>
@@ -167,6 +169,7 @@
                    aria-labelledby="label_311" required=""/>
             <label class="form-sub-label" for="input_311_full" id="sublabel_311_masked" style="min-height:13px"
                    aria-hidden="false">  </label>
+              <span class="text-danger">${idCardErr}</span>
           </span>
                 </div>
             </li>
@@ -185,6 +188,7 @@
                    aria-labelledby="label_6" required=""/>
             <label class="form-sub-label" for="input_6_full" id="sublabel_6_masked" style="min-height:13px"
                    aria-hidden="false">  </label>
+              <span class="text-danger">${telErr}</span>
           </span>
                 </div>
             </li>
@@ -196,6 +200,7 @@
                            data-defaultvalue="" size="30" value="${customer.email}" placeholder="ex: myname@example.com"
                            data-component="email" aria-labelledby="label_5"/>
                 </div>
+                <span class="text-danger">${emailRegex}</span>
             </li>
             <li class="form-line jf-required" data-type="control_address" id="id_4">
                 <label class="form-label form-label-left form-label-auto" id="label_4" for="input_4_addr_line1">

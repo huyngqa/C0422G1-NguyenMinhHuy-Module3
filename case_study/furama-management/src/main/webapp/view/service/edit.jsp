@@ -20,6 +20,7 @@
         <div class="col-md-12">
             <label for="name" class="form-label">Name Service</label>
             <input type="text" class="form-control" id="name" name="name" value="${facility.facilityName}">
+            <p class="text-danger">${nameErr}</p>
         </div>
         <div class="col-md-12">
             <label for="area" class="form-label">Area</label>
@@ -85,6 +86,7 @@
                 <label for="number_of_floors_villa" class="form-label">Number of floors </label>
                 <input type="text" class="form-control" value="${facility.numOfFloor}" id="number_of_floors_villa"
                        name="number_of_floors">
+                <p class="text-danger">${floorErr}</p>
             </div>
             <div class="col-md-12 " id="sv-free" style="display: none">
                 <label for="service_free_villa" class="form-label">Service free </label>
@@ -112,6 +114,7 @@
                 <label for="number_of_floors_house" class="form-label">Number of floors </label>
                 <input type="text" class="form-control" value="${facility.numOfFloor}" id="number_of_floors_house"
                        name="number_of_floors">
+                <p class="text-danger">${floorErr}</p>
             </div>
             <div class="col-md-12 " id="sv-free" style="display: none">
                 <label for="service_free_house" class="form-label">Service free </label>
@@ -138,6 +141,7 @@
                 <label for="number_of_floors_room" class="form-label">Number of floors </label>
                 <input type="text" class="form-control" id="number_of_floors_room"
                        name="number_of_floors">
+                <p class="text-danger">${floorErr}</p>
             </div>
             <div class="col-md-12 " id="sv-free" style="display: none">
                 <label for="service_free" class="form-label">Service free </label>
@@ -146,7 +150,7 @@
             </div>
         </c:if>
         <div class="col-12 ">
-            <button type="submit" class="btn btn-primary">Add New</button>
+            <button type="submit" class="btn btn-primary">Edit</button>
         </div>
     </form>
 </div>

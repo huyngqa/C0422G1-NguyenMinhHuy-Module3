@@ -12,7 +12,9 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "CustomerServlet", value = "/customer")
 public class CustomerServlet extends HttpServlet {
@@ -105,20 +107,34 @@ public class CustomerServlet extends HttpServlet {
         int typeCustomerId = Integer.parseInt(request.getParameter("type_customer"));
         TypeCustomer typeCustomer = typeCustomerService.getTypeCustomerById(typeCustomerId);
         String name = request.getParameter("name");
-        LocalDate birthDay = LocalDate.parse(request.getParameter("birth_day"));
+        LocalDate birthDay = null;
+        try {
+            birthDay = LocalDate.parse(request.getParameter("birth_day"), DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         boolean gender = Boolean.parseBoolean(request.getParameter("gender"));
         String idCard = request.getParameter("id_card");
         String tel = request.getParameter("tel");
         String email = request.getParameter("email");
         String address = request.getParameter("address");
         Customer customer = new Customer(name, birthDay, idCard, tel, email, address, typeCustomer, gender);
-        boolean checkRow = customerService.addNewCustomer(customer);
-        if (checkRow) {
-            request.setAttribute("message", "Successfully added customer: " + name);
+        Map<String, String> errMap = customerService.addNewCustomer(customer);
+        if (errMap.size() > 0) {
+            for (String str : errMap.keySet()) {
+                request.setAttribute(str, errMap.get(str));
+            }
         } else {
-            request.setAttribute("message", "Failed process");
+            request.setAttribute("message", "Successfully added customer: " + name);
         }
-        showFormAddCustomer(request, response);
+        request.setAttribute("typeCustomerList", typeCustomerService.findAllTypeCustomer());
+        try {
+            request.getRequestDispatcher("view/customer/add.jsp").forward(request, response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
@@ -136,20 +152,28 @@ public class CustomerServlet extends HttpServlet {
         int typeCustomerId = Integer.parseInt(request.getParameter("type_customer"));
         TypeCustomer typeCustomer = typeCustomerService.getTypeCustomerById(typeCustomerId);
         String name = request.getParameter("name");
-        LocalDate birthDay = LocalDate.parse(request.getParameter("birth_day"));
+        LocalDate birthDay = null;
+        try {
+            birthDay = LocalDate.parse(request.getParameter("birth_day"), DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         boolean gender = Boolean.parseBoolean(request.getParameter("gender"));
         String idCard = request.getParameter("id_card");
         String tel = request.getParameter("tel");
         String email = request.getParameter("email");
         String address = request.getParameter("address");
         Customer customer = new Customer(id, name, birthDay, idCard, tel, email, address, typeCustomer, gender);
-        boolean checkRow = customerService.editCustomer(customer);
-        if (checkRow) {
-            request.setAttribute("message", "Successfully updated customer: " + name);
+        Map<String, String> errMap = customerService.editCustomer(customer);
+        if (errMap.size() > 0) {
+            for (String str : errMap.keySet()) {
+                request.setAttribute(str, errMap.get(str));
+            }
+            showFormEditCustomer(request, response);
         } else {
-            request.setAttribute("message", "Failed process");
+            request.setAttribute("message", "Successfully added customer: " + name);
+            showListCustomer(request, response);
         }
-        showListCustomer(request, response);
     }
 
     private void searchCustomerByName(HttpServletRequest request, HttpServletResponse response) {
