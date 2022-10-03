@@ -192,7 +192,7 @@
                         </div>
                         <div class="col-md-12">
                             <label class="form-label">Service includes</label>
-                            <button type="button" class="btn btn-primary mt-2 mb-2" data-bs-toggle="modal"
+                            <button type="button" class="btn btn-primary mt-2 mb-2"
                                     data-bs-target="#" onclick="showService()">
                                 +
                             </button>
@@ -205,7 +205,7 @@
                                     <th>Amount</th>
                                     <th>
                                         <button style="display: none" type="button" class="btn btn-danger"
-                                                data-bs-toggle="modal" data-bs-target="#" id="buttonHide"
+                                                data-bs-target="#" id="buttonHide"
                                                 onclick="hideAttachFacility()">
                                             x
                                         </button>
@@ -215,19 +215,19 @@
                                     <td><input type="checkbox"> Karaoke</td>
                                     <td>House</td>
                                     <td>100000</td>
-                                    <td><input style="width: 70px" type="number"></td>
+                                    <td><input style="width:50px" type="number"></td>
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox"> Thuê xe máy</td>
                                     <td>House</td>
                                     <td>100000</td>
-                                    <td><input style="width: 70px" type="number"></td>
+                                    <td><input style="width: 50px" type="number"></td>
                                 </tr>
                                 <tr>
                                     <td><input type="checkbox"> Thuê xe đạp</td>
                                     <td>House</td>
                                     <td>100000</td>
-                                    <td><input style="width: 70px" type="number"></td>
+                                    <td><input style="width: 50px" type="number"></td>
                                 </tr>
 
                             </table>

@@ -109,7 +109,7 @@ public class CustomerServlet extends HttpServlet {
         String name = request.getParameter("name");
         LocalDate birthDay = null;
         try {
-            birthDay = LocalDate.parse(request.getParameter("birth_day"), DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+            birthDay = LocalDate.parse(request.getParameter("birth_day"));
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -30,7 +30,7 @@
         <th>Country</th>
         <th>Actions</th>
       </tr>
-      <c:forEach var="user" items="${listUser}">
+      <c:forEach items="${listUser}" var="user" >
         <tr>
           <td>${user.id}</td>
           <td>${user.name}</td>
